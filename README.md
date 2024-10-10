@@ -84,6 +84,13 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 - In SpiceV1, all the FETs are sized with 14 fins.
 - In the PreAmp stage, the output signal is distorted and never settles while the clock is high.
 - In the Regenerative phase, the final comparator output is latched to correct logic i.e. low when `Vin_n` < `Vin_p` and vice versa but never reaches -0.7V or +0.7V, although the noise margin for FinFET based inverter is approximately 0.2V, so it can work, but we will try to improve this.
+
+**Techniques:**
+1. Downsize transistors
+2. Strengthen the clock signal by adding a buffer or pre-driver stage
+3. Reassess the capacitances in the circuit, particularly at the output nodes.
+4. Reducing the clock speed
+
 </details>
 
 <!-- ### V2
@@ -116,6 +123,9 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
     <summary>SPICE_V2 Analysis</summary>
 
 - In SpiceV1, all the FETs are sized with 14 fins.
+- Clk Period: 500ps
 - In the PreAmp stage, the output signal is distorted and never settles while the clock is high.
 - In the Regenerative phase, the final comparator output is latched to correct logic i.e. low when `Vin_n` < `Vin_p` and vice versa but never reaches -0.7V or +0.7V, although the noise margin for FinFET based inverter is approximately 0.2V, so it can work, but we will try to improve this.
+
 </details> -->
+
