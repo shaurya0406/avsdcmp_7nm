@@ -98,14 +98,14 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
     <summary>Schematic_V2</summary>
 
 **Schematic_V1** [File](Xschem/src/comparator.sch)
-![Comparator_Sch_V1](images/Comparator_Sch_V2.png)
+![Comparator_Sch_V2](images/Comparator_Sch_V2.png)
 </details>
 
 <details>
     <summary>Testbench_V2</summary>
 
 **Testbench_V1** [File](Xschem/test/comparator_test.sch)
-![Comparator_TB_V1](images/Comparator_TB_V2.png)
+![Comparator_TB_V2](images/Comparator_TB_V2.png)
 </details>
 
 <details>
@@ -114,9 +114,9 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 **SPICE_V1** [File](Xschem/spice/comparator_test.spice)
 
 **Pre Amplifier Output**
-![Comparator_Spice_V1_PreAmp](images/Comparator_Spice_V2_PreAmp.png)
+![Comparator_Spice_V2_PreAmp](images/Comparator_Spice_V2_PreAmp.png)
 **Regenerative Latch Output**
-![Comparator_Spice_V1_RegenLatch](images/Comparator_Spice_V2_RegenLatch.png)
+![Comparator_Spice_V2_RegenLatch](images/Comparator_Spice_V2_RegenLatch.png)
 </details>
 
 <details>
@@ -130,3 +130,20 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 
 </details>
 
+<details>
+    <summary>Testbench_V2_Triangular Pulse</summary>
+
+**Testbench_V2_Triangular Pulse** [File](Xschem/test/comparator_test_triangular_input.sch)
+![Comparator_TB_V2_Tri_Pulse](images/Comparator_TB_V2_Tri_Pulse.png)
+</details>
+
+<details>
+    <summary>SPICE_V2_Triangular Pulse</summary>
+
+**SPICE_V2_Triangular Pulse** [File](Xschem/spice/comparator_test_triangular_input.spice)
+
+**Pre Amplifier Output**
+![Comparator_Spice_V2_Tri_Pulse_PreAmp](images/Comparator_Spice_V2_Tri_Pulse_PreAmp.png)
+**Regenerative Latch Output**
+![Comparator_Spice_V2_Tri_Pulse_RegenLatch](images/Comparator_Spice_V2_Tri_Pulse_RegenLatch.png)
+</details>
