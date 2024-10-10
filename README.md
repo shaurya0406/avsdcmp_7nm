@@ -93,19 +93,19 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 
 </details>
 
-<!-- ### V2
+### V2
 <details>
     <summary>Schematic_V2</summary>
 
 **Schematic_V1** [File](Xschem/src/comparator.sch)
-![Comparator_Sch_V1](images/Comparator_Sch_V1.png)
+![Comparator_Sch_V1](images/Comparator_Sch_V2.png)
 </details>
 
 <details>
     <summary>Testbench_V2</summary>
 
 **Testbench_V1** [File](Xschem/test/comparator_test.sch)
-![Comparator_TB_V1](images/Comparator_TB_V1.png)
+![Comparator_TB_V1](images/Comparator_TB_V2.png)
 </details>
 
 <details>
@@ -114,18 +114,19 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 **SPICE_V1** [File](Xschem/spice/comparator_test.spice)
 
 **Pre Amplifier Output**
-![Comparator_Spice_V1_PreAmp](images/Comparator_Spice_V1_PreAmp.png)
+![Comparator_Spice_V1_PreAmp](images/Comparator_Spice_V2_PreAmp.png)
 **Regenerative Latch Output**
-![Comparator_Spice_V1_RegenLatch](images/Comparator_Spice_V1_RegenLatch.png)
+![Comparator_Spice_V1_RegenLatch](images/Comparator_Spice_V2_RegenLatch.png)
 </details>
 
 <details>
     <summary>SPICE_V2 Analysis</summary>
 
-- In SpiceV1, all the FETs are sized with 14 fins.
 - Clk Period: 500ps
-- In the PreAmp stage, the output signal is distorted and never settles while the clock is high.
-- In the Regenerative phase, the final comparator output is latched to correct logic i.e. low when `Vin_n` < `Vin_p` and vice versa but never reaches -0.7V or +0.7V, although the noise margin for FinFET based inverter is approximately 0.2V, so it can work, but we will try to improve this.
+- In the PreAmp stage, the output signal never settles for a long time but produces high enough gain for the next stage. FETs are downsized. PFET's parasitic capacitance is reduced by downsizing and clock is made more robust by adding a large size buffer
+- `Clk_n` is not changed as the inverter is of a large size and hence gives good output drive.
+- In the Regenerative phase, the final comparator output is bufferred to ensure it reaches VDD in both directions.
+- Overall, comparator works well for a slow rising input, and gives an output of 0.65V instead of 0.7V, which is improvement over V1 (0.6V)
 
-</details> -->
+</details>
 

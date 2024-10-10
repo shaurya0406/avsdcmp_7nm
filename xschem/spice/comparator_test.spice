@@ -15,8 +15,8 @@ x1 VDD VSS Vin_p Out_n Vin_n Clk Out_p comparator
 .control
 run
 TRAN 1p 6050p
-plot Vin_p-Vin_n Out_p-Out_n Ext_Clk-4
-plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Ext_Clk-4
+plot Vin_p-Vin_n Out_p-Out_n Clk-4
+plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Clk-4
 .endc
 .save all
 .end
@@ -36,28 +36,48 @@ plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Ext_Clk-4
 *.ipin Vin_n
 *.opin Out_p
 *.ipin Clk
-Xpfet1 Pre_Amp_n Clk VDD VDD asap_7nm_pfet l=7e-009 nfin=14
-Xpfet2 Pre_Amp_p Clk VDD VDD asap_7nm_pfet l=7e-009 nfin=14
+Xpfet1 Pre_Amp_n Clk_buf VDD VDD asap_7nm_pfet l=7e-009 nfin=7
+Xpfet2 Pre_Amp_p Clk_buf VDD VDD asap_7nm_pfet l=7e-009 nfin=7
 Xnfet1 Pre_Amp_n Vin_p net1 VSS asap_7nm_nfet l=7e-009 nfin=14
 Xnfet2 Pre_Amp_p Vin_n net1 VSS asap_7nm_nfet l=7e-009 nfin=14
-Xnfet3 net1 Clk VSS VSS asap_7nm_nfet l=7e-009 nfin=10
-Xpfet3 net2 Out_n VDD VDD asap_7nm_pfet l=7e-009 nfin=14
-Xpfet4 net3 Out_p VDD VDD asap_7nm_pfet l=7e-009 nfin=14
-Xpfet5 Out_p Pre_Amp_n net2 VDD asap_7nm_pfet l=7e-009 nfin=14
-Xpfet6 Out_n Pre_Amp_p net3 VDD asap_7nm_pfet l=7e-009 nfin=14
-Xnfet4 Out_p Clk_n VSS VSS asap_7nm_nfet l=7e-009 nfin=14
-Xnfet5 Out_p Out_n VSS VSS asap_7nm_nfet l=7e-009 nfin=14
-Xnfet6 Out_n Out_p VSS VSS asap_7nm_nfet l=7e-009 nfin=14
-Xnfet7 Out_n Clk_n VSS VSS asap_7nm_nfet l=7e-009 nfin=14
+Xnfet3 net1 Clk_buf VSS VSS asap_7nm_nfet l=7e-009 nfin=14
+Xpfet3 net2 net4 VDD VDD asap_7nm_pfet l=7e-009 nfin=2
+Xpfet4 net3 net5 VDD VDD asap_7nm_pfet l=7e-009 nfin=2
+Xpfet5 net5 Pre_Amp_n net2 VDD asap_7nm_pfet l=7e-009 nfin=4
+Xpfet6 net4 Pre_Amp_p net3 VDD asap_7nm_pfet l=7e-009 nfin=4
+Xnfet4 net5 Clk_n VSS VSS asap_7nm_nfet l=7e-009 nfin=10
+Xnfet5 net5 net4 VSS VSS asap_7nm_nfet l=7e-009 nfin=10
+Xnfet6 net4 net5 VSS VSS asap_7nm_nfet l=7e-009 nfin=10
+Xnfet7 net4 Clk_n VSS VSS asap_7nm_nfet l=7e-009 nfin=10
 Xpfet7 Clk_n Clk VDD VDD asap_7nm_pfet l=7e-009 nfin=14
 Xnfet8 Clk_n Clk VSS VSS asap_7nm_nfet l=7e-009 nfin=14
+x3 Out_p net6 VDD VSS buf8
+x1 net6 net5 VSS VDD buf8
+x2 Out_n net7 VDD VSS buf8
+x10 net7 net4 VSS VDD buf8
+x4 Clk_buf Clk VDD VSS buf8
+.ends
+
+
+* expanding   symbol:  buf8.sym # of pins=4
+** sym_path: /media/psf/avsdcmp_7nm/xschem/lib/buf8.sym
+** sch_path: /media/psf/avsdcmp_7nm/xschem/lib/buf8.sch
+.subckt buf8 Out In VDD VSS
+*.iopin VDD
+*.iopin VSS
+*.ipin In
+*.opin Out
+Xpfet1 net1 In VDD VDD asap_7nm_pfet l=7e-009 nfin=8
+Xnfet1 net1 In VSS VSS asap_7nm_nfet l=7e-009 nfin=8
+Xpfet2 Out net1 VDD VDD asap_7nm_pfet l=7e-009 nfin=8
+Xnfet2 Out net1 VSS VSS asap_7nm_nfet l=7e-009 nfin=8
 .ends
 
 .GLOBAL GND
 **** begin user architecture code
 
-.subckt asap_7nm_pfet S G D B l=7e-009 nfin=14
-	npmos_finfet S G D B BSIMCMG_osdi_P l=7e-009 nfin=14
+.subckt asap_7nm_pfet S G D B l=7e-009 nfin=8
+	npmos_finfet S G D B BSIMCMG_osdi_P l=7e-009 nfin=8
 .ends asap_7nm_pfet
 
 .model BSIMCMG_osdi_P BSIMCMG_va (
@@ -130,8 +150,8 @@ pre_osdi ~/ASAP7_FinFET_Inverter_Characterization/Xschem_ASAP7/bsimcmg_arch64.os
 
 
 
-.subckt asap_7nm_nfet S G D B l=7e-009 nfin=14
-	nnmos_finfet S G D B BSIMCMG_osdi_N l=7e-009 nfin=14
+.subckt asap_7nm_nfet S G D B l=7e-009 nfin=8
+	nnmos_finfet S G D B BSIMCMG_osdi_N l=7e-009 nfin=8
 .ends asap_7nm_nfet
 
 .model BSIMCMG_osdi_N BSIMCMG_va (
