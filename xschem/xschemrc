@@ -1,0 +1,10 @@
+# Configure xschem project directory to use sky130 symbols
+set XSCHEM_LIBRARY_PATH {}
+append XSCHEM_LIBRARY_PATH :${XSCHEM_SHAREDIR}/xschem_library
+append XSCHEM_LIBRARY_PATH :$env(PWD)/lib
+
+set dircolor(xschem_library$) blue
+set dircolor(devices$) red
+
+set netlist_type spice
+set netlist_dir :$env(PWD)/spice
