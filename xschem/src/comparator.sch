@@ -249,22 +249,22 @@ C {devices/lab_pin.sym} 810 -920 1 0 {name=l30 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 810 -820 3 0 {name=l42 sig_type=std_logic lab=VSS
 }
-C {buf8.sym} 930 -870 2 0 {name=x1}
+C {buf8.sym} 930 -870 0 1 {name=x1}
 C {devices/lab_pin.sym} 930 -920 1 0 {name=l31 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 930 -820 3 0 {name=l34 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 2080 -870 2 0 {name=l43 sig_type=std_logic lab=Out_n
 }
-C {buf8.sym} 2020 -870 2 1 {name=x2}
-C {devices/lab_pin.sym} 2020 -820 3 0 {name=l44 sig_type=std_logic lab=VDD
+C {buf8.sym} 2020 -870 0 0 {name=x2}
+C {devices/lab_pin.sym} 1900 -920 1 0 {name=l44 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 2020 -920 1 0 {name=l55 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 2020 -820 3 0 {name=l55 sig_type=std_logic lab=VSS
 }
 C {buf8.sym} 1900 -870 0 0 {name=x10}
-C {devices/lab_pin.sym} 1900 -820 3 0 {name=l56 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 2020 -920 1 0 {name=l56 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 1900 -920 1 0 {name=l57 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 1900 -820 3 0 {name=l57 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1910 -1110 0 0 {name=l32 sig_type=std_logic lab=Clk
 }

@@ -7,4 +7,4 @@ set dircolor(xschem_library$) blue
 set dircolor(devices$) red
 
 set netlist_type spice
-set netlist_dir :$env(PWD)/spice
+set netlist_dir $env(PWD)/spice

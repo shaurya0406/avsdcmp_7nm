@@ -12,6 +12,17 @@ Key features of this project include:
 - Comprehensive simulation results, including DC, transient, and noise analysis.
 - Detailed characterization of pre-layout and post-layout performance.
 
+## Design Specifications
+
+| Parameter    | Description                          | Value   | Unit |
+|--------------|--------------------------------------|---------|------|
+| VDD          | Supply Voltage                       | 0.7     | V    |
+| ΔV           | Hysteresis (V_Rise - V_Fall)         | 52      | mV   |
+| V_IL         | Input Low Voltage                    | 0       | V    |
+| V_IH         | Input High Voltage                   | 26      | mV   |
+| V_OL         | Output Low Voltage                   | 0       | V    |
+| V_OH         | Output High Voltage                  | 650     | mV   |
+
 ## Reference Design
 <details>
     <summary>Reference Design</summary>

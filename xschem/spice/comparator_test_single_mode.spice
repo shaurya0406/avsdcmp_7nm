@@ -1,5 +1,32 @@
+** sch_path: /media/psf/avsdcmp_7nm/xschem/test/comparator_test_single_mode.sch
+**.subckt comparator_test_single_mode
+VDD VDD GND 0.7
+VSS VSS GND 0
+V1 Clk GND PULSE(0 0.7 10ps 5ps 5ps 240ps 500ps)
+V2 Vin_p VSS PULSE(0.7 -0.7 10ps 6000ps 10ps 10ps 6050ps)
+V3 Vref GND 0
+R1 Out_n VSS 10k m=1
+R2 Out_p VSS 10k m=1
+x1 VDD VSS Vin_p Out_n Vref Clk Out_p comparator
+**** begin user architecture code
+
+
+.control
+TRAN 1p 6050p
+run
+plot Vin_p Vref Out_p Out_n Clk-4
+.endc
+.save all
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /media/psf/avsdcmp_7nm/xschem/src/comparator.sym # of pins=7
+** sym_path: /media/psf/avsdcmp_7nm/xschem/src/comparator.sym
 ** sch_path: /media/psf/avsdcmp_7nm/xschem/src/comparator.sch
-**.subckt comparator VDD VSS Vin_p Out_n Vin_n Clk Out_p
+.subckt comparator VDD VSS Vin_p Out_n Vin_n Clk Out_p
 *.iopin VDD
 *.iopin VSS
 *.ipin Vin_p
@@ -27,7 +54,8 @@ x1 net6 net5 VDD VSS buf8
 x2 Out_n net7 VDD VSS buf8
 x10 net7 net4 VDD VSS buf8
 x4 Clk_buf Clk VDD VSS buf8
-**.ends
+.ends
+
 
 * expanding   symbol:  buf8.sym # of pins=4
 ** sym_path: /media/psf/avsdcmp_7nm/xschem/lib/buf8.sym
@@ -43,6 +71,7 @@ Xpfet2 Out net1 VDD VDD asap_7nm_pfet l=7e-009 nfin=8
 Xnfet2 Out net1 VSS VSS asap_7nm_nfet l=7e-009 nfin=8
 .ends
 
+.GLOBAL GND
 **** begin user architecture code
 
 .subckt asap_7nm_pfet S G D B l=7e-009 nfin=8
