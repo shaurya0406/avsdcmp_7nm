@@ -64,28 +64,28 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 <details>
     <summary>Schematic_V1</summary>
 
-**Schematic_V1** [File](Xschem/src/comparator.sch)
+**Schematic_V1** [File](xschem/src/comparator.sch)
 ![Comparator_Sch_V1](images/Comparator_Sch_V1.png)
 </details>
 
 <details>
     <summary>Symbol_V1</summary>
 
-**Symbol_V1** [File](Xschem/src/comparator.sym)
+**Symbol_V1** [File](xschem/src/comparator.sym)
 ![Comparator_Sym_V1](images/Comparator_Sym_V1.png)
 </details>
 
 <details>
     <summary>Testbench_V1</summary>
 
-**Testbench_V1** [File](Xschem/test/comparator_test.sch)
+**Testbench_V1** [File](xschem/test/comparator_test.sch)
 ![Comparator_TB_V1](images/Comparator_TB_V1.png)
 </details>
 
 <details>
     <summary>SPICE_V1</summary>
 
-**SPICE_V1** [File](Xschem/spice/comparator_test.spice)
+**SPICE_V1** [File](xschem/spice/comparator_test.spice)
 
 **Pre Amplifier Output**
 ![Comparator_Spice_V1_PreAmp](images/Comparator_Spice_V1_PreAmp.png)
@@ -112,21 +112,21 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 <details>
     <summary>Schematic_V2</summary>
 
-**Schematic_V1** [File](Xschem/src/comparator.sch)
+**Schematic_V1** [File](xschem/src/comparator.sch)
 ![Comparator_Sch_V2](images/Comparator_Sch_V2.png)
 </details>
 
 <details>
     <summary>Testbench_V2</summary>
 
-**Testbench_V1** [File](Xschem/test/comparator_test.sch)
+**Testbench_V1** [File](xschem/test/comparator_test.sch)
 ![Comparator_TB_V2](images/Comparator_TB_V2.png)
 </details>
 
 <details>
     <summary>SPICE_V2</summary>
 
-**SPICE_V1** [File](Xschem/spice/comparator_test.spice)
+**SPICE_V1** [File](xschem/spice/comparator_test.spice)
 
 **Pre Amplifier Output**
 ![Comparator_Spice_V2_PreAmp](images/Comparator_Spice_V2_PreAmp.png)
@@ -148,14 +148,14 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 <details>
     <summary>Testbench_V2_Triangular Pulse</summary>
 
-**Testbench_V2_Triangular Pulse** [File](Xschem/test/comparator_test_triangular_input.sch)
+**Testbench_V2_Triangular Pulse** [File](xschem/test/comparator_test_triangular_input.sch)
 ![Comparator_TB_V2_Tri_Pulse](images/Comparator_TB_V2_Tri_Pulse.png)
 </details>
 
 <details>
     <summary>SPICE_V2_Triangular Pulse</summary>
 
-**SPICE_V2_Triangular Pulse** [File](Xschem/spice/comparator_test_triangular_input.spice)
+**SPICE_V2_Triangular Pulse** [File](xschem/spice/comparator_test_triangular_input.spice)
 
 **Pre Amplifier Output**
 ![Comparator_Spice_V2_Tri_Pulse_PreAmp](images/Comparator_Spice_V2_Tri_Pulse_PreAmp.png)
