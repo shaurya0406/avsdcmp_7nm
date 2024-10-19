@@ -158,3 +158,8 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 **Regenerative Latch Output**
 ![Comparator_Spice_V2_Tri_Pulse_RegenLatch](images/Comparator_Spice_V2_Tri_Pulse_RegenLatch.png)
 </details>
+
+## Acknowledgement
+
+- Kunal Ghosh, Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
+- Dr. Skandha Deepsita, Teaching Assistant, VLSI System Design (VSD) Corp. Pvt. Ltd.
