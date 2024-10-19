@@ -4,13 +4,13 @@
 
 This repository contains the design, simulation, and characterization of a comparator using the ASAP7 7nm FinFET Process Design Kit (PDK). The comparator is a crucial component in various analog and mixed-signal systems, including Analog-to-Digital Converters (ADCs), where it is used to compare two input voltages and generate a digital output.
 
-The design leverages the ASAP7 FinFET technology, offering advantages in power efficiency and speed at advanced nodes. The comparator has been thoroughly simulated for pre-layout and post-layout characteristics using industry-standard tools like **Xschem** for schematic capture, **NGSpice** for circuit simulation, and **Magic** for layout generation.
+The design leverages the ASAP7 FinFET technology, offering advantages in power efficiency and speed at advanced nodes. The comparator has been thoroughly simulated for pre-layout and post-layout characteristics using industry-standard tools like **Xschem** for schematic capture, **NGSpice** for circuit simulation.
 
 Key features of this project include:
 - Utilization of the ASAP7 7nm PDK for FinFET-based transistor design.
 - A focus on low-power, high-speed analog comparator design.
 - Comprehensive simulation results, including DC, transient, and noise analysis.
-- Detailed characterization of pre-layout and post-layout performance.
+- Detailed characterization of pre-layout performance.
 
 ## Design Specifications
 
@@ -22,6 +22,10 @@ Key features of this project include:
 | V_IH         | Input High Voltage                   | 26      | mV   |
 | V_OL         | Output Low Voltage                   | 0       | V    |
 | V_OH         | Output High Voltage                  | 650     | mV   |
+
+## Related Repositories
+
+[ASAP7_FinFET_Inverter_Characterization](https://github.com/shaurya0406/ASAP7_FinFET_Inverter_Characterization.git)
 
 ## Reference Design
 <details>
@@ -196,5 +200,6 @@ The difference between the higher-level trip value (VRise) and the lower-level t
 
 ## Acknowledgement
 
-- Kunal Ghosh, Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
-- Dr. Skandha Deepsita, Teaching Assistant, VLSI System Design (VSD) Corp. Pvt. Ltd.
+- [Kunal Ghosh](www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836), Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd. 
+- [Dr. Skandha Deepsita](www.linkedin.com/in/dr-skandha-deepsita-s-027433ba), Teaching Assistant, VLSI System Design (VSD) Corp. Pvt. Ltd.
+- [Jossan Eleazar B](www.linkedin.com/in/jossan-eleazar-b-79809a25a), Ex- ASIC engineer at Meister-gen Technologies
