@@ -159,6 +159,41 @@ The circuit was designed using ASAP7 FET Models based on BSIM CMG in Xschem.
 ![Comparator_Spice_V2_Tri_Pulse_RegenLatch](images/Comparator_Spice_V2_Tri_Pulse_RegenLatch.png)
 </details>
 
+## Characterization
+
+<details>
+    <summary>Hysteresis</summary>
+
+### Hysteresis
+When the difference between two analog input signals approach zero, noise on the inputs will cause spurious switching of digital output. This rapid change in output due to noise can be prevented by hysteresis. 
+Hysteresis is switching the output high or low at different input signal levels. 
+In place of one switching point, hysteresis introduces two: one for rising edge, and one for falling edge of voltage or current. 
+The difference between the higher-level trip value (VRise) and the lower-level trip value (VFall) equals the hysteresis voltage (HYST).
+
+**Spice file**
+[comparator_test_single_mode](xschem/spice/comparator_test_single_mode.spice)
+
+**VRise**
+![Comparator_Spice_Hyst_Rise](images/Comparator_Spice_Hyst_Rise.png)
+
+**VFall**
+![Comparator_Spice_Hyst_Fall](images/Comparator_Spice_Hyst_Fall.png)
+
+</details>
+
+<details>
+    <summary>Voh</summary>
+
+### Voh
+
+**Spice file**
+[comparator_test](xschem/spice/comparator_test.spice)
+
+**Output**
+![Comparator_Spice_Voh](images/Comparator_Spice_Voh.png)
+
+</details>
+
 ## Acknowledgement
 
 - Kunal Ghosh, Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
