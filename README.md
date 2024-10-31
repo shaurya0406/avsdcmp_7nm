@@ -198,6 +198,14 @@ The difference between the higher-level trip value (VRise) and the lower-level t
 
 </details>
 
+## Layout
+
+<details>
+    <summary>GDS View</summary>
+
+![comp_layout_v1](images/comp_layout_v1.png)
+</details>
+
 ## Acknowledgement
 
 - [Kunal Ghosh](www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836), Co-Founder of VLSI System Design (VSD) Corp. Pvt. Ltd. 
