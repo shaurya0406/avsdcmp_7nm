@@ -147,6 +147,26 @@ N 1650 -870 1860 -870 {
 lab=#net4}
 N 1960 -870 1980 -870 {
 lab=#net7}
+N 1070 -1140 1070 -1100 {
+lab=Clk_buf}
+N 1030 -1170 1030 -1070 {
+lab=#net8}
+N 1070 -1070 1080 -1070 {
+lab=VSS}
+N 1080 -1070 1080 -1040 {
+lab=VSS}
+N 1070 -1040 1080 -1040 {
+lab=VSS}
+N 1070 -1170 1080 -1170 {
+lab=VDD}
+N 1080 -1200 1080 -1170 {
+lab=VDD}
+N 1070 -1200 1080 -1200 {
+lab=VDD}
+N 1070 -1120 1090 -1120 {
+lab=Clk_buf}
+N 1000 -1120 1030 -1120 {
+lab=#net8}
 C {devices/iopin.sym} 860 -1400 0 0 {name=p1 lab=VDD
 }
 C {devices/iopin.sym} 860 -1380 0 0 {name=p2 lab=VSS
@@ -266,12 +286,13 @@ C {devices/lab_pin.sym} 2020 -920 1 0 {name=l56 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 1900 -820 3 0 {name=l57 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 1910 -1110 0 0 {name=l32 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 1070 -1200 1 0 {name=l46 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 2010 -1110 2 0 {name=l33 sig_type=std_logic lab=Clk_buf
+C {devices/lab_pin.sym} 1070 -1040 3 0 {name=l47 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 1950 -1160 0 0 {name=l40 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 1090 -1120 2 0 {name=l48 sig_type=std_logic lab=Clk_buf
 }
-C {devices/lab_pin.sym} 1950 -1060 2 0 {name=l45 sig_type=std_logic lab=VSS
+C {asap_7nm_pfet.sym} 1050 -1170 0 0 {name=pfet8 model=asap_7nm_pfet spiceprefix=X l=7e-009 nfin=14}
+C {asap_7nm_nfet.sym} 1050 -1070 0 0 {name=nfet9 model=asap_7nm_nfet spiceprefix=X l=7e-009 nfin=14}
+C {devices/lab_pin.sym} 1000 -1120 0 0 {name=l32 sig_type=std_logic lab=Clk_n
 }
-C {buf8.sym} 1950 -1110 0 0 {name=x4}

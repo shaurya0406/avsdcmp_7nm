@@ -55,7 +55,8 @@ x3 Out_p net6 VDD VSS buf8
 x1 net6 net5 VDD VSS buf8
 x2 Out_n net7 VDD VSS buf8
 x10 net7 net4 VDD VSS buf8
-x4 Clk_buf Clk VDD VSS buf8
+Xpfet8 Clk_buf Clk_n VDD VDD asap_7nm_pfet l=7e-009 nfin=14
+Xnfet9 Clk_buf Clk_n VSS VSS asap_7nm_nfet l=7e-009 nfin=14
 .ends
 
 
