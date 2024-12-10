@@ -23,7 +23,7 @@ Key features of this project include:
 | V_OL         | Output Low Voltage                   | 0       | V    |
 | V_OH         | Output High Voltage                  | 650     | mV   |
 
-## Related Repositories
+## Standard Cell Characterization | DC, AC, VTC
 
 [ASAP7_FinFET_Inverter_Characterization](https://github.com/shaurya0406/ASAP7_FinFET_Inverter_Characterization.git)
 
